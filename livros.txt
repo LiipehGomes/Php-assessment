@@ -1,0 +1,1 @@
+a:2:{i:1;a:3:{s:4:"nome";s:16:"Pequeno Principe";s:5:"autor";s:7:"Antoine";s:10:"publicacao";s:7:"6/05/43";}i:0;a:3:{s:4:"nome";s:1:"d";s:5:"autor";s:1:"d";s:10:"publicacao";s:1:"d";}}
