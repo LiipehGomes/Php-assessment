@@ -1,0 +1,205 @@
+[
+    {
+        "id": "1",
+        "name": "To Kill a Mockingbird",
+        "bookIsbn": "978-0-06-112008-4",
+        "bookPublisher": "J.B. Lippincott & Co.",
+        "author": "Harper Lee"
+    },
+    {
+        "id": "2",
+        "name": "1984",
+        "bookIsbn": "978-0-452-28423-4",
+        "bookPublisher": "Secker & Warburg",
+        "author": "George Orwell"
+    },
+    {
+        "id": "3",
+        "name": "The Great Gatsby",
+        "bookIsbn": "978-0-7432-7356-5",
+        "bookPublisher": "Charles Scribner's Sons",
+        "author": "F. Scott Fitzgerald"
+    },
+    {
+        "id": "4",
+        "name": "The Catcher in the Rye",
+        "bookIsbn": "978-0-316-76948-0",
+        "bookPublisher": "Little, Brown and Company",
+        "author": "J.D. Salinger"
+    },
+    {
+        "id": "5",
+        "name": "Pride and Prejudice",
+        "bookIsbn": "978-0-19-953556-9",
+        "bookPublisher": "T. Egerton",
+        "author": "Jane Austen"
+    },
+    {
+        "id": "6",
+        "name": "The Lord of the Rings",
+        "bookIsbn": "978-0-618-00222-8",
+        "bookPublisher": "Allen & Unwin",
+        "author": "J.R.R. Tolkien"
+    },
+    {
+        "id": "7",
+        "name": "Animal Farm",
+        "bookIsbn": "978-0-452-28424-1",
+        "bookPublisher": "Secker & Warburg",
+        "author": "George Orwell"
+    },
+    {
+        "id": "8",
+        "name": "Jane Eyre",
+        "bookIsbn": "978-0-14-144114-6",
+        "bookPublisher": "Smith, Elder & Co.",
+        "author": "Charlotte Bront\u00eb"
+    },
+    {
+        "id": "9",
+        "name": "The Hobbit",
+        "bookIsbn": "978-0-618-00221-1",
+        "bookPublisher": "George Allen & Unwin",
+        "author": "J.R.R. Tolkien"
+    },
+    {
+        "id": "10",
+        "name": "Fahrenheit 451",
+        "bookIsbn": "978-0-7432-4722-2",
+        "bookPublisher": "Ballantine Books",
+        "author": "Ray Bradbury"
+    },
+    {
+        "id": "11",
+        "name": "Moby-Dick",
+        "bookIsbn": "978-0-14-243724-7",
+        "bookPublisher": "Harper & Brothers",
+        "author": "Herman Melville"
+    },
+    {
+        "id": "12",
+        "name": "War and Peace",
+        "bookIsbn": "978-0-14-044793-4",
+        "bookPublisher": "The Russian Messenger",
+        "author": "Leo Tolstoy"
+    },
+    {
+        "id": "13",
+        "name": "The Odyssey",
+        "bookIsbn": "978-0-14-026886-7",
+        "bookPublisher": "Penguin Classics",
+        "author": "Homer"
+    },
+    {
+        "id": "14",
+        "name": "Crime and Punishment",
+        "bookIsbn": "978-0-14-305814-4",
+        "bookPublisher": "The Russian Messenger",
+        "author": "Fyodor Dostoevsky"
+    },
+    {
+        "id": "15",
+        "name": "Brave New World",
+        "bookIsbn": "978-0-06-085052-4",
+        "bookPublisher": "Chatto & Windus",
+        "author": "Aldous Huxley"
+    },
+    {
+        "id": "16",
+        "name": "The Grapes of Wrath",
+        "bookIsbn": "978-0-14-303943-3",
+        "bookPublisher": "The Viking Press-James Lloyd",
+        "author": "John Steinbeck"
+    },
+    {
+        "id": "17",
+        "name": "Wuthering Heights",
+        "bookIsbn": "978-0-14-143955-6",
+        "bookPublisher": "Thomas Cautley Newby",
+        "author": "Emily Bront\u00eb"
+    },
+    {
+        "id": "18",
+        "name": "The Count of Monte Cristo",
+        "bookIsbn": "978-0-14-044926-6",
+        "bookPublisher": "Penguin Classics",
+        "author": "Alexandre Dumas"
+    },
+    {
+        "id": "19",
+        "name": "A Tale of Two Cities",
+        "bookIsbn": "978-0-14-143960-0",
+        "bookPublisher": "Chapman & Hall",
+        "author": "Charles Dickens"
+    },
+    {
+        "id": "20",
+        "name": "Great Expectations",
+        "bookIsbn": "978-0-14-143956-3",
+        "bookPublisher": "Chapman & Hall",
+        "author": "Charles Dickens"
+    },
+    {
+        "id": "21",
+        "name": "Ulysses",
+        "bookIsbn": "978-0-14-118280-5",
+        "bookPublisher": "Shakespeare and Company",
+        "author": "James Joyce"
+    },
+    {
+        "id": "22",
+        "name": "The Brothers Karamazov",
+        "bookIsbn": "978-0-14-044924-2",
+        "bookPublisher": "The Russian Messenger",
+        "author": "Fyodor Dostoevsky"
+    },
+    {
+        "id": "23",
+        "name": "Les Mis\u00e9rables",
+        "bookIsbn": "978-0-14-044430-8",
+        "bookPublisher": "A. Lacroix, Verboeckhoven & Cie",
+        "author": "Victor Hugo"
+    },
+    {
+        "id": "24",
+        "name": "The Iliad",
+        "bookIsbn": "978-0-14-044592-3",
+        "bookPublisher": "Penguin Classics",
+        "author": "Homer"
+    },
+    {
+        "id": "25",
+        "name": "Madame Bovary",
+        "bookIsbn": "978-0-14-044912-9",
+        "bookPublisher": "Penguin Classics",
+        "author": "Gustave Flaubert"
+    },
+    {
+        "id": "26",
+        "name": "The Divine Comedy",
+        "bookIsbn": "978-0-14-243722-3",
+        "bookPublisher": "Penguin Classics",
+        "author": "Dante Alighieri"
+    },
+    {
+        "id": "27",
+        "name": "Don Quixote",
+        "bookIsbn": "978-0-14-243723-0",
+        "bookPublisher": "Penguin Classics",
+        "author": "Miguel de Cervantes"
+    },
+    {
+        "id": "28",
+        "name": "One Hundred Years of Solitude",
+        "bookIsbn": "978-0-06-088328-7",
+        "bookPublisher": "Harper & Row",
+        "author": "Gabriel Garcia Marquez"
+    },
+    {
+        "id": "29",
+        "name": "Anna Karenina",
+        "bookIsbn": "978-0-14-303500-8",
+        "bookPublisher": "The Russian Messenger",
+        "author": "Leo Tolstoy"
+    }
+]
