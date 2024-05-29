@@ -1,11 +1,137 @@
 [
     {
         "id": "1",
-        "name": "1",
-        "type": "1",
-        "quantity": "1",
-        "description": "no description added",
-        "brand": "1",
+        "name": "Desk",
+        "type": "Furniture",
+        "quantity": "5",
+        "description": "Large wooden desk with drawers",
+        "brand": "OfficeMaster",
+        "status": "There is in stock"
+    },
+    {
+        "id": "2",
+        "name": "Chair",
+        "type": "Furniture",
+        "quantity": "10",
+        "description": "Ergonomic office chair with lumbar support",
+        "brand": "ErgoMax",
+        "status": "There is in stock"
+    },
+    {
+        "id": "3",
+        "name": "Computer",
+        "type": "Electronics",
+        "quantity": "8",
+        "description": "Desktop computer with Intel Core i7 processor",
+        "brand": "Dell",
+        "status": "There is in stock"
+    },
+    {
+        "id": "4",
+        "name": "Keyboard",
+        "type": "Electronics",
+        "quantity": "15",
+        "description": "Wireless keyboard with full-size keys",
+        "brand": "Logitech",
+        "status": "There is in stock"
+    },
+    {
+        "id": "5",
+        "name": "Monitor",
+        "type": "Electronics",
+        "quantity": "12",
+        "description": "27-inch LED monitor with HDMI input",
+        "brand": "Samsung",
+        "status": "There is in stock"
+    },
+    {
+        "id": "6",
+        "name": "Pen",
+        "type": "Stationery",
+        "quantity": "50",
+        "description": "Black ballpoint pens, pack of 10",
+        "brand": "BIC",
+        "status": "There is in stock"
+    },
+    {
+        "id": "7",
+        "name": "Notebook",
+        "type": "Stationery",
+        "quantity": "20",
+        "description": "A5 size ruled notebook, 100 pages",
+        "brand": "Moleskine",
+        "status": "There is in stock"
+    },
+    {
+        "id": "8",
+        "name": "Stapler",
+        "type": "Stationery",
+        "quantity": "10",
+        "description": "Metal stapler with refillable staples",
+        "brand": "Swingline",
+        "status": "There is in stock"
+    },
+    {
+        "id": "9",
+        "name": "Desk Organizer",
+        "type": "Stationery",
+        "quantity": "7",
+        "description": "Mesh desk organizer with multiple compartments",
+        "brand": "Safco",
+        "status": "There is in stock"
+    },
+    {
+        "id": "10",
+        "name": "Whiteboard",
+        "type": "Stationery",
+        "quantity": "3",
+        "description": "Magnetic whiteboard with marker tray",
+        "brand": "Quartet",
+        "status": "There is in stock"
+    },
+    {
+        "id": "11",
+        "name": "File Cabinet",
+        "type": "Furniture",
+        "quantity": "4",
+        "description": "Steel file cabinet with locking mechanism",
+        "brand": "HON",
+        "status": "There is in stock"
+    },
+    {
+        "id": "12",
+        "name": "Desk Lamp",
+        "type": "Electronics",
+        "quantity": "6",
+        "description": "LED desk lamp with adjustable brightness",
+        "brand": "Taotronics",
+        "status": "There is in stock"
+    },
+    {
+        "id": "13",
+        "name": "Calculator",
+        "type": "Electronics",
+        "quantity": "10",
+        "description": "Scientific calculator with 2-line display",
+        "brand": "Texas Instruments",
+        "status": "There is in stock"
+    },
+    {
+        "id": "14",
+        "name": "Scissors",
+        "type": "Stationery",
+        "quantity": "15",
+        "description": "Stainless steel scissors with ergonomic handles",
+        "brand": "Fiskars",
+        "status": "There is in stock"
+    },
+    {
+        "id": "15",
+        "name": "Binder",
+        "type": "Stationery",
+        "quantity": "20",
+        "description": "3-ring binder with clear view cover",
+        "brand": "Avery",
         "status": "There is in stock"
     }
 ]

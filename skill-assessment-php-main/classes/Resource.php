@@ -14,6 +14,7 @@ class Resource extends Library
         $this->status = $status;
     }
 
+
     public function getDescription()
     {
         return $this->description;
@@ -62,5 +63,92 @@ class Resource extends Library
             'status' => $this->status
         ];
     }
+
+    public static function deleteResourceById($id, $filename)
+    {
+        $data = [];
+        if (file_exists($filename)) {
+            $json = file_get_contents($filename);
+            $data = json_decode($json, true);
+        }
+
+        $resourceIndex = null;
+        foreach ($data as $index => $resource) {
+            if ($resource['id'] == $id) {
+                $resourceIndex = $index;
+                break;
+            }
+        }
+
+        if ($resourceIndex !== null) {
+            unset($data[$resourceIndex]);
+            file_put_contents($filename, json_encode(array_values($data), JSON_PRETTY_PRINT));
+            echo "Resource with ID $id deleted successfully!\n";
+        } else {
+            echo "Resource with ID $id not found.\n";
+        }
+    }
+
+    public static function searchResourceById($id, $filename)
+{
+    if (file_exists($filename)) {
+        $json = file_get_contents($filename);
+        $data = json_decode($json, true);
+
+
+        if (!empty($data)) {
+            $resourceIndex = null;
+            foreach ($data as $index => $resource) {
+                if ($resource['id'] == $id) {
+                    $resourceIndex = $index;
+                    break;
+                }
+            }
+
+            if ($resourceIndex !== null) {
+                $resource = $data[$resourceIndex];
+                echo "ID: " . $resource['id'] . "\n";
+                echo "Name: " . $resource['name'] . "\n";
+                echo "Type: " . $resource['type'] . "\n";
+                echo "Quantity: " . $resource['quantity'] . "\n";
+                echo "Description: " . $resource['description'] . "\n";
+                echo "Brand: " . $resource['brand'] . "\n";
+                echo "Status: " . $resource['status'] . "\n";
+                echo "--------------------------------------\n";
+                echo "\n";
+            } else {
+                echo "No resource with ID $id found.\n";
+            }
+        } else {
+            echo "No resources found.\n";
+        }
+    } else {
+        echo "Resource file not found.\n";
+    }
 }
 
+    public static function listAllResources($filename)
+    {
+        if (file_exists($filename)) {
+            $json = file_get_contents($filename);
+            $data = json_decode($json, true);
+
+            if (!empty($data)) {
+                foreach ($data as $resource) {
+                    echo "ID: " . $resource['id'] . "\n";
+                    echo "Name: " . $resource['name'] . "\n";
+                    echo "Type: " . $resource['type'] . "\n";
+                    echo "Quantity: " . $resource['quantity'] . "\n";
+                    echo "Description: " . $resource['description'] . "\n";
+                    echo "Brand: " . $resource['brand'] . "\n";
+                    echo "Status: " . $resource['status'] . "\n";
+                    echo "--------------------------\n";
+                }
+            } else {
+                echo "No resources found.\n";
+            }
+        } else {
+            echo "Resource file not found.\n";
+        }
+    }
+}

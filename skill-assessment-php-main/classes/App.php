@@ -2,28 +2,33 @@
 
 include_once 'Book.php';
 include_once 'Resource.php';
+use PhpUnit\Framework\TestCase;
 
 // Função para carregar a lista de livros do arquivo JSON
 function loadBooksFromFile($filename)
 {
-  if (file_exists($filename)) {
-    $json = file_get_contents($filename);
-    $data = json_decode($json, true);
-    $books = [];
-    foreach ($data as $bookData) {
-      $book = new Book(
-        $bookData['id'],
-        $bookData['name'],
-        $bookData['isbn'],
-        $bookData['author'],
-        $bookData['publisher'],
-        $bookData['numOfPages']
-      );
-      $books[] = $book;
+    if (file_exists($filename)) {
+        $json = file_get_contents($filename);
+        $data = json_decode($json, true);
+        $books = [];
+        foreach ($data as $bookData) {
+            // Criar uma instância de Author com os detalhes do autor
+            $author = new Author($bookData['author']['id'], $bookData['author']['name']);
+
+            // Criar uma instância de Book com a instância de Author
+            $book = new Book(
+                $bookData['id'],
+                $bookData['name'],
+                $bookData['isbn'],
+                $author, // Passar a instância de Author
+                $bookData['publisher'],
+                $bookData['numOfPages']
+            );
+            $books[] = $book;
+        }
+        return $books;
     }
-    return $books;
-  }
-  return [];
+    return [];
 }
 
 // Função para salvar a lista de livros no arquivo JSON
@@ -53,31 +58,6 @@ function addResourceToFile($resource, $filename)
     file_put_contents($filename, json_encode($data, JSON_PRETTY_PRINT));
 }
 
-function deleteResourceFromFile($resourceId, $filename)
-{
-    $data = [];
-    if (file_exists($filename)) {
-        $json = file_get_contents($filename);
-        $data = json_decode($json, true);
-    }
-
-    $indexToDelete = null;
-    foreach ($data as $index => $item) {
-        if ($item['id'] == $resourceId) {
-            $indexToDelete = $index;
-            break;
-        }
-    }
-
-    if ($indexToDelete !== null) {
-        unset($data[$indexToDelete]);
-        file_put_contents($filename, json_encode(array_values($data), JSON_PRETTY_PRINT));
-        echo "Resource with ID $resourceId deleted successfully!\n";
-    } else {
-        echo "Resource with ID $resourceId not found.\n";
-    }
-}
-
 
 // the program starts here -->
 do {
@@ -88,29 +68,37 @@ do {
   echo " - Type 1 to List the books - \n";
   echo " - Type 2 to add books - \n";
   echo " - Type 3 to delete books - \n";
-  echo " - Type 4 to add a new resource - \n";
+  echo " - Type 4 to open the resource menu - \n";
   echo " - Type 5 to quit - \n";
-  echo " ---------------------------------- \n";
+  echo " ------------------------------------------------ \n";
+  echo "##################################################\n";
 
   $option = readline("Type your option: ");
 
   switch ($option) {
     case 1:
-      if (empty($booksList)) {
-        echo "No books found.\n";
-      } else {
-        foreach ($booksList as $book) {
-          echo "ID: " . $book->getId() . "\n";
-          echo "Name: " . $book->getName() . "\n";
-          echo "ISBN: " . $book->getISBN() . "\n";
-          echo "Publisher: " . $book->getPublisher() . "\n";
-          echo "Author: " . $book->getAuthor() . "\n";
-          echo "--------------------------\n";
+      do {
+        $order = readline('Do you want to list books in ascending or descending order? (asc/desc): ');
+        if ($order === 'asc' || $order === 'desc') {
+          $sortedBooks = Book::sortByName($booksList);
+          if ($order === 'desc') {
+            $sortedBooks = array_reverse($sortedBooks);
+          }
+          foreach ($sortedBooks as $book) {
+            echo "ID: " . $book->getId() . "\n";
+            echo "Name: " . $book->getName() . "\n";
+            echo "ISBN: " . $book->getISBN() . "\n";
+            echo "Publisher: " . $book->getPublisher() . "\n";
+            echo "Author: " . $book->getAuthor() . "\n";
+            echo "--------------------------\n";
+          }
+        } else {
+          echo "Invalid option! Please choose 'asc' or 'desc'.\n";
         }
-      }
+      } while ($order !== 'asc' && $order !== 'desc');
       break;
-
-    case 2:
+      
+      case 2:
       $book = Book::addNewBook();
       $booksList[] = $book;
       saveBooksToFile($booksList, 'books.json');
@@ -134,22 +122,62 @@ do {
         echo "Book with ID $idToDelete not found.\n";
       }
       break;
-    case 4:
-      do {
-        echo "Enter the option: \n";
-        echo "Enter 1 - to add a new Resource: \n";
-        echo "Enter 2 - to delete a new Resource: \n";
-        echo "Enter 3 - to list all resources: \n";
-        $resource = Resource::addResource();
-        addResourceToFile($resource, 'resources.json');
-    } while ($optionResource != 5);
-    break;
+      case 4:
+        do {
+            echo " ------------------------------------------------ \n";
+            echo "##################################################\n";
+            echo " - Resource Menu - \n";
+            echo " - Type 1 to add a new Resource - \n";
+            echo " - Type 2 to delete a Resource - \n";
+            echo " - Type 3 to list all resources - \n";
+            echo " - Type 4 search resources by ID- \n";
+            echo " - Type 5 to return to the main menu - \n";
+            echo " ------------------------------------------------ \n";
+
+            $optionResource = readline("Type your option: ");
+
+            switch ($optionResource) {
+                case '1':
+                    $resource = Resource::addResource();
+                    addResourceToFile($resource, 'resources.json');
+                    break;
+
+                case '2':
+                    $resourceIdToDelete = readline("Enter the ID of the resource to be deleted: ");
+                    Resource::deleteResourceById($resourceIdToDelete, 'resources.json');
+                    break;
+
+                    case '3':
+                      echo "Listing all resources:\n";
+                      Resource::listAllResources('resources.json');
+                      break;
+                    case '4':
+                      $resourceId = readline("Enter the ID of the resource: ");
+                      echo "\n";
+                      echo "Listing all resources:\n";
+                      echo "\n";
+                      Resource::searchResourceById($resourceId,'resources.json');
+                      break;
+
+                case '5':
+                    echo "Returning to the main menu.\n";
+                    break;
+
+                default:
+                    echo "Invalid option! Try again.\n";
+                    break;
+            }
+        } while ($optionResource != 4);
+        break;
+
+    case 5:
+        echo "System closed.\n";
+        break;
 
     default:
-      echo "Option invalid! Try again.\n";
-      break;
-  }
-
+        echo "Invalid option! Try again.\n";
+        break;
+}
 } while ($option != 5);
 
 echo "System closed.\n";

@@ -1,194 +1,222 @@
 [
     {
         "id": "1",
-        "name": "The Great Gatsby",
-        "isbn": "9780743273565",
-        "author": "F. Scott Fitzgerald",
-        "publisher": "Scribner",
-        "numOfPages": "180"
-    },
-    {
-        "id": "2",
         "name": "To Kill a Mockingbird",
-        "isbn": "9780061120084",
-        "author": "Harper Lee",
+        "isbn": "978-0061120084",
+        "author": {
+            "id": "1",
+            "name": "Harper Lee"
+        },
         "publisher": "Harper Perennial Modern Classics",
         "numOfPages": "336"
     },
     {
-        "id": "3",
+        "id": "2",
         "name": "1984",
-        "isbn": "9780451524935",
-        "author": "George Orwell",
+        "isbn": "978-0451524935",
+        "author": {
+            "id": "2",
+            "name": "George Orwell"
+        },
         "publisher": "Signet Classic",
         "numOfPages": "328"
     },
     {
+        "id": "3",
+        "name": "The Catcher in the Rye",
+        "isbn": "978-0316769488",
+        "author": {
+            "id": "3",
+            "name": "J.D. Salinger"
+        },
+        "publisher": "Little, Brown and Company",
+        "numOfPages": "288"
+    },
+    {
         "id": "4",
         "name": "Pride and Prejudice",
-        "isbn": "9780141439518",
-        "author": "Jane Austen",
+        "isbn": "978-0141439518",
+        "author": {
+            "id": "4",
+            "name": "Jane Austen"
+        },
         "publisher": "Penguin Classics",
-        "numOfPages": "384"
+        "numOfPages": "416"
     },
     {
         "id": "5",
-        "name": "The Catcher in the Rye",
-        "isbn": "9780316769488",
-        "author": "J.D. Salinger",
-        "publisher": "Back Bay Books",
-        "numOfPages": "288"
+        "name": "The Great Gatsby",
+        "isbn": "978-0743273565",
+        "author": {
+            "id": "5",
+            "name": "F. Scott Fitzgerald"
+        },
+        "publisher": "Scribner",
+        "numOfPages": "180"
     },
     {
         "id": "6",
-        "name": "The Lord of the Rings",
-        "isbn": "9780544003415",
-        "author": "J.R.R. Tolkien",
-        "publisher": "Mariner Books",
-        "numOfPages": "1178"
+        "name": "To the Lighthouse",
+        "isbn": "978-0156907392",
+        "author": {
+            "id": "6",
+            "name": "Virginia Woolf"
+        },
+        "publisher": "Harvest Books",
+        "numOfPages": "209"
     },
     {
         "id": "7",
-        "name": "To Kill a Mockingbird",
-        "isbn": "9780061120084",
-        "author": "Harper Lee",
-        "publisher": "Harper Perennial Modern Classics",
-        "numOfPages": "336"
-    },
-    {
-        "id": "8",
-        "name": "Animal Farm",
-        "isbn": "9780452284241",
-        "author": "George Orwell",
-        "publisher": "Signet Classics",
-        "numOfPages": "140"
-    },
-    {
-        "id": "9",
-        "name": "The Hobbit",
-        "isbn": "9780547928227",
-        "author": "J.R.R. Tolkien",
-        "publisher": "Houghton Mifflin Harcourt",
-        "numOfPages": "320"
-    },
-    {
-        "id": "10",
         "name": "Brave New World",
-        "isbn": "9780060850524",
-        "author": "Aldous Huxley",
+        "isbn": "978-0060850524",
+        "author": {
+            "id": "7",
+            "name": "Aldous Huxley"
+        },
         "publisher": "Harper Perennial Modern Classics",
         "numOfPages": "288"
     },
     {
-        "id": "11",
-        "name": "The Grapes of Wrath",
-        "isbn": "9780143039433",
-        "author": "John Steinbeck",
-        "publisher": "Penguin Classics",
-        "numOfPages": "544"
-    },
-    {
-        "id": "12",
-        "name": "The Old Man and the Sea",
-        "isbn": "9780684801223",
-        "author": "Ernest Hemingway",
-        "publisher": "Scribner",
-        "numOfPages": "132"
-    },
-    {
-        "id": "13",
-        "name": "Fahrenheit 451",
-        "isbn": "9781451673319",
-        "author": "Ray Bradbury",
-        "publisher": "Simon & Schuster",
-        "numOfPages": "249"
-    },
-    {
-        "id": "14",
-        "name": "One Hundred Years of Solitude",
-        "isbn": "9780060883287",
-        "author": "Gabriel Garc\u00eda M\u00e1rquez",
-        "publisher": "Harper Perennial",
-        "numOfPages": "417"
-    },
-    {
-        "id": "15",
-        "name": "Catch-22",
-        "isbn": "9780684833393",
-        "author": "Joseph Heller",
-        "publisher": "Simon & Schuster",
-        "numOfPages": "453"
-    },
-    {
-        "id": "16",
-        "name": "Lord of the Flies",
-        "isbn": "9780571191475",
-        "author": "William Golding",
-        "publisher": "Faber & Faber",
-        "numOfPages": "224"
-    },
-    {
-        "id": "17",
-        "name": "The Book Thief",
-        "isbn": "9780375842207",
-        "author": "Markus Zusak",
-        "publisher": "Knopf Books for Young Readers",
-        "numOfPages": "552"
-    },
-    {
-        "id": "18",
-        "name": "The Hitchhiker's Guide to the Galaxy",
-        "isbn": "9780345391803",
-        "author": "Douglas Adams",
-        "publisher": "Del Rey",
-        "numOfPages": "208"
-    },
-    {
-        "id": "19",
-        "name": "Slaughterhouse-Five",
-        "isbn": "9780385333849",
-        "author": "Kurt Vonnegut",
-        "publisher": "Dial Press Trade Paperback",
-        "numOfPages": "275"
-    },
-    {
-        "id": "20",
-        "name": "The Picture of Dorian Gray",
-        "isbn": "9780486278070",
-        "author": "Oscar Wilde",
-        "publisher": "Dover Publications",
-        "numOfPages": "240"
-    },
-    {
-        "id": "21",
+        "id": "8",
         "name": "Moby-Dick",
-        "isbn": "9780553213119",
-        "author": "Herman Melville",
-        "publisher": "Bantam",
+        "isbn": "978-0142437247",
+        "author": {
+            "id": "8",
+            "name": "Herman Melville"
+        },
+        "publisher": "Penguin Classics",
         "numOfPages": "720"
     },
     {
-        "id": "22",
-        "name": "Alice's Adventures in Wonderland",
-        "isbn": "9780099572885",
-        "author": "Lewis Carroll",
-        "publisher": "Vintage Children's Classics",
-        "numOfPages": "192"
-    },
-    {
-        "id": "23",
-        "name": "Crime and Punishment",
-        "isbn": "9780486454115",
-        "author": "Fyodor Dostoevsky",
-        "publisher": "Dover Publications",
-        "numOfPages": "430"
-    },
-    {
-        "id": "24",
-        "name": "Wuthering Heights",
-        "isbn": "9780141439556",
-        "author": "Emily Bront\u00eb",
+        "id": "9",
+        "name": "The Odyssey",
+        "isbn": "978-0140268867",
+        "author": {
+            "id": "9",
+            "name": "Homer"
+        },
         "publisher": "Penguin Classics",
-        "numOfPages": "464"
+        "numOfPages": "560"
+    },
+    {
+        "id": "10",
+        "name": "Frankenstein",
+        "isbn": "978-0141439471",
+        "author": {
+            "id": "10",
+            "name": "Mary Shelley"
+        },
+        "publisher": "Penguin Classics",
+        "numOfPages": "352"
+    },
+    {
+        "id": "11",
+        "name": "The Picture of Dorian Gray",
+        "isbn": "978-0141442464",
+        "author": {
+            "id": "11",
+            "name": "Oscar Wilde"
+        },
+        "publisher": "Penguin Classics",
+        "numOfPages": "304"
+    },
+    {
+        "id": "12",
+        "name": "Jane Eyre",
+        "isbn": "978-0141441146",
+        "author": {
+            "id": "12",
+            "name": "Charlotte Brontë"
+        },
+        "publisher": "Penguin Classics",
+        "numOfPages": "624"
+    },
+    {
+        "id": "13",
+        "name": "Crime and Punishment",
+        "isbn": "978-0140449136",
+        "author": {
+            "id": "13",
+            "name": "Fyodor Dostoevsky"
+        },
+        "publisher": "Penguin Classics",
+        "numOfPages": "576"
+    },
+    {
+        "id": "14",
+        "name": "Wuthering Heights",
+        "isbn": "978-0141439556",
+        "author": {
+            "id": "14",
+            "name": "Emily Brontë"
+        },
+        "publisher": "Penguin Classics",
+        "numOfPages": "416"
+    },
+    {
+        "id": "15",
+        "name": "Don Quixote",
+        "isbn": "978-0060934347",
+        "author": {
+            "id": "15",
+            "name": "Miguel de Cervantes"
+        },
+        "publisher": "Harper Perennial Modern Classics",
+        "numOfPages": "992"
+    },
+    {
+        "id": "16",
+        "name": "The Brothers Karamazov",
+        "isbn": "978-0374528379",
+        "author": {
+            "id": "16",
+            "name": "Fyodor Dostoevsky"
+        },
+        "publisher": "Farrar, Straus and Giroux",
+        "numOfPages": "796"
+    },
+    {
+        "id": "17",
+        "name": "One Hundred Years of Solitude",
+        "isbn": "978-0060883287",
+        "author": {
+            "id": "17",
+            "name": "Gabriel García Márquez"
+        },
+        "publisher": "Harper Perennial Modern Classics",
+        "numOfPages": "448"
+    },
+    {
+        "id": "18",
+        "name": "War and Peace",
+        "isbn": "978-0140447934",
+        "author": {
+            "id": "18",
+            "name": "Leo Tolstoy"
+        },
+        "publisher": "Penguin Classics",
+        "numOfPages": "1296"
+    },
+    {
+        "id": "19",
+        "name": "The Lord of the Rings",
+        "isbn": "978-0544003415",
+        "author": {
+            "id": "19",
+            "name": "J.R.R. Tolkien"
+        },
+        "publisher": "Mariner Books",
+        "numOfPages": "1504"
+    },
+    {
+        "id": "20",
+        "name": "The Road",
+        "isbn": "978-0307387899",
+        "author": {
+            "id": "20",
+            "name": "Cormac McCarthy"
+        },
+        "publisher": "Vintage",
+        "numOfPages": "256"
     }
 ]
