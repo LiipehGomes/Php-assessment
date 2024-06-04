@@ -11,13 +11,21 @@ class Book extends Library {
     protected $numOfPages;
 
     public function __construct($id, $name, $isbn,Author $author, $publisher, $numOfPages) {
-        parent::__construct($id, $name, '', '');
+        parent::__construct($id, $name, '', ''); // Parent constructor
         $this->isbn = $isbn;
         $this->author = $author;
         $this->publisher = $publisher;
         $this->numOfPages = $numOfPages;
     }
 
+
+    //all the getters  
+
+    /**
+     * Get ISBN 
+     * parameter 
+     * expected output
+     */
     public function getISBN() {
         return $this->isbn;
     }
@@ -34,8 +42,22 @@ class Book extends Library {
         return $this->numOfPages;
     }
 
+    //all the setters
+    public function setISBN($isbn) {
+        $this->isbn = $isbn;
+    }
+
+    public function setPublisher($publisher) {
+        $this->publisher = $publisher;
+    }
+
+    public function setNumPages($numOfPages) {
+        $this->numOfPages = $numOfPages;
+    }
+
+
     public static function addNewBook() {
-        $id = readline("Digite o ID do livro: ");
+        $id = intval(readline("Digite o ID do livro: "));
         $name = readline("Digite o nome do livro: ");
         $isbn = readline("Digite o ISBN do livro: ");
         $authorId = readline("Digite o ID do autor do livro: ");
@@ -48,7 +70,7 @@ class Book extends Library {
         return new Book($id, $name, $isbn, $author, $publisher, $numOfPages);
     }
 
-    public function toArray() {
+    public function toArray() { // change the estructure to array 
         return [
             'id' => $this->id,
             'name' => $this->name,
@@ -59,8 +81,8 @@ class Book extends Library {
         ];
     }
 
-    public static function sortByName($books) {
-        usort($books, function($a, $b) {
+    public static function sortByName($books) { // function to sort the list by name 
+        usort($books, function($a, $b) {        // (asc or desc)
             return strcmp($a->getName(), $b->getName());
         });
         return $books;
@@ -68,10 +90,10 @@ class Book extends Library {
     
     
     public static function searchBookById($id, $filename)
-{
+{ // function to search the books by ID
     if (file_exists($filename)) {
-        $json = file_get_contents($filename);
-        $data = json_decode($json, true);
+        $json = file_get_contents($filename);// check if the file exists and trasnform
+        $data = json_decode($json, true);    // the json values to php
 
 
         if (!empty($data)) {

@@ -127,6 +127,14 @@ class Resource extends Library
     }
 }
 
+
+    public static function sortByName($resource) {
+    usort($resource, function($a, $b) {
+        return strcmp($a->getName(), $b->getName());
+    });
+    return $resource;
+    }
+
     public static function listAllResources($filename)
     {
         if (file_exists($filename)) {

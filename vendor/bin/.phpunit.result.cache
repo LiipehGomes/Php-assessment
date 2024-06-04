@@ -1,0 +1,1 @@
+{"version":1,"defects":{"BookTest::testAddNewBook":4,"Warning":6,"testToArray::testToArray":4},"times":{"BookTest::testAddNewBook":0.694,"Warning":0.008,"testToArray::testToArray":0.044}}

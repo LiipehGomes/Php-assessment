@@ -126,7 +126,7 @@
         "isbn": "978-0141441146",
         "author": {
             "id": "12",
-            "name": "Charlotte Brontë"
+            "name": "Charlotte Bront\u00eb"
         },
         "publisher": "Penguin Classics",
         "numOfPages": "624"
@@ -148,7 +148,7 @@
         "isbn": "978-0141439556",
         "author": {
             "id": "14",
-            "name": "Emily Brontë"
+            "name": "Emily Bront\u00eb"
         },
         "publisher": "Penguin Classics",
         "numOfPages": "416"
@@ -181,7 +181,7 @@
         "isbn": "978-0060883287",
         "author": {
             "id": "17",
-            "name": "Gabriel García Márquez"
+            "name": "Gabriel Garc\u00eda M\u00e1rquez"
         },
         "publisher": "Harper Perennial Modern Classics",
         "numOfPages": "448"

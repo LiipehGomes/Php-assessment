@@ -4,7 +4,6 @@ include_once 'Book.php';
 include_once 'Resource.php';
 use PhpUnit\Framework\TestCase;
 
-// Função para carregar a lista de livros do arquivo JSON
 function loadBooksFromFile($filename)
 {
     if (file_exists($filename)) {
@@ -12,15 +11,13 @@ function loadBooksFromFile($filename)
         $data = json_decode($json, true);
         $books = [];
         foreach ($data as $bookData) {
-            // Criar uma instância de Author com os detalhes do autor
             $author = new Author($bookData['author']['id'], $bookData['author']['name']);
 
-            // Criar uma instância de Book com a instância de Author
             $book = new Book(
                 $bookData['id'],
                 $bookData['name'],
                 $bookData['isbn'],
-                $author, // Passar a instância de Author
+                $author,
                 $bookData['publisher'],
                 $bookData['numOfPages']
             );
@@ -31,7 +28,31 @@ function loadBooksFromFile($filename)
     return [];
 }
 
-// Função para salvar a lista de livros no arquivo JSON
+function loadResourcesFromFile($filename)
+{
+    if (file_exists($filename)) {
+        $json = file_get_contents($filename);
+        $data = json_decode($json, true);
+        $resources = [];
+        foreach ($data as $resourceData) {
+            $resource = new Resource(
+                $resourceData['id'],
+                $resourceData['name'],
+                $resourceData['type'],
+                $resourceData['quantity'],
+                $resourceData['description'],
+                $resourceData['brand'],
+                $resourceData['status']
+            );
+            $resources[] = $resource;
+        }
+        return $resources;
+    }
+    return [];
+}
+
+
+
 function saveBooksToFile($booksList, $filename)
 {
   $data = [];
@@ -41,7 +62,6 @@ function saveBooksToFile($booksList, $filename)
   file_put_contents($filename, json_encode($data, JSON_PRETTY_PRINT));
 }
 
-// Carregar a lista de livros do arquivo books.json
 $booksList = loadBooksFromFile('books.json');
 
 
@@ -59,7 +79,6 @@ function addResourceToFile($resource, $filename)
 }
 
 
-// the program starts here -->
 do {
   echo "##################################################\n";
   echo "Welcome to the Fremantle library system!\n";
@@ -147,10 +166,31 @@ do {
                     Resource::deleteResourceById($resourceIdToDelete, 'resources.json');
                     break;
 
-                    case '3':
-                      echo "Listing all resources:\n";
-                      Resource::listAllResources('resources.json');
-                      break;
+                case '3':
+                    $resourceList = loadResourcesFromFile('resources.json');
+                
+                    do {
+                        $orderRes = readline('Do you want to list resources in ascending or descending order? (asc/desc): ');
+                        if ($orderRes === 'asc' || $orderRes === 'desc') {
+                            $sortedResources = Resource::sortByName($resourceList);
+                            if ($orderRes === 'desc') {
+                                $sortedResources = array_reverse($sortedResources);
+                            }
+                            foreach ($sortedResources as $resource) {
+                                echo "ID: " . $resource->getId() . "\n";
+                                echo "Name: " . $resource->getName() . "\n";
+                                echo "Type: " . $resource->getType() . "\n";
+                                echo "Quantity: " . $resource->getQuantity() . "\n";
+                                echo "Brand: " . $resource->getBrand() . "\n";
+                                echo "Status: " . $resource->getStatus() . "\n";
+                                echo "--------------------------\n";
+                            }
+                        } else {
+                            echo "Invalid option! Please choose 'asc' or 'desc'.\n";
+                        }
+                    } while ($orderRes !== 'asc' && $orderRes !== 'desc');
+                    break;
+                
                     case '4':
                       $resourceId = readline("Enter the ID of the resource: ");
                       echo "\n";
